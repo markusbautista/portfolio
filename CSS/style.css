@@ -46,6 +46,10 @@ html {
   height: calc(100svh - 50px);
 }
 
+.showOnMobile {
+  display: none;
+}
+
 .headingText {
   font-size: var(--font-size-extra-large);
   font-weight: 700;
@@ -59,8 +63,6 @@ html {
 .normalText {
   font-size: var(--font-size-medium);
   font-weight: 400;
-
-  text-align: justify;
 }
 
 .smallText {
@@ -92,6 +94,7 @@ html {
   height: auto;
 
   overflow: hidden;
+  border-bottom: 1px solid var(--primary-color);
 }
 
 .navbar ul {
@@ -130,7 +133,7 @@ html {
 }
 
 .menu-icon {
-  font-size: var(--font-size-medium);
+  fill: var(--primary-color);
 }
 
 .sidebar {
@@ -179,7 +182,7 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: flex-start;
 }
 
@@ -188,7 +191,7 @@ html {
   flex-direction: column;
   flex-wrap: wrap;
 
-  flex-basis: calc(50% - 5%);
+  flex-basis: 45%;
   min-width: 300px;
 
   justify-content: flex-start;
@@ -201,13 +204,21 @@ html {
     display: none;
   }
 
+  .showOnMobile {
+    display: inline-block;
+  }
+
   .normalText {
     font-size: var(--font-size-small);
+  }
+
+  .navbar {
+    border-bottom: none;
   }
 
   .titled-paragraph {
     flex-basis: 100%;
     min-width: 100%;
-    padding: 2.5% 0;
+    padding: 5% 0;
   }
 }
