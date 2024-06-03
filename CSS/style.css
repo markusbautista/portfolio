@@ -179,10 +179,8 @@ html {
   flex-direction: row;
   flex-wrap: wrap;
 
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: flex-start;
-
-  gap: 5%;
 }
 
 .titled-paragraph {
