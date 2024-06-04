@@ -232,6 +232,10 @@ html {
 
 /* Media query for small screens */
 @media (max-width: 700px) {
+  #home {
+    overflow: hidden;
+  }
+  
   .hideOnMobile {
     display: none;
   }
