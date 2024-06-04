@@ -2,7 +2,7 @@
 
 :root {
   /* Color variables */
-  --primary-color: #2c2a4a;
+  --primary-color: hsl(244, 28%, 23%);
   --secondary-color: #e5d352;
   --accent-color: #4f7cac;
   --background-color: #fcf7f8;
@@ -39,25 +39,39 @@ html {
 }
 
 .container {
-  padding: 1% 5%;
+  padding: 0 5%;
+}
+
+.section {
+  padding: 5% 0;
 }
 
 #home {
-  height: calc(100svh - 50px);
+  height: calc(100svh - 60px);
 }
 
 .showOnMobile {
   display: none;
 }
 
+.logoText {
+  font-size: var(--font-size-large);
+  font-weight: 900;
+}
+
 .headingText {
-  font-size: var(--font-size-extra-large);
+  font-size: var(--font-size-3x-large);
   font-weight: 700;
 }
 
 .subheadingText {
-  font-size: var(--font-size-large);
+  font-size: var(--font-size-2x-large);
   font-weight: 500;
+}
+
+.titleText {
+  font-size: var(--font-size-large);
+  font-weight: 400;
 }
 
 .normalText {
@@ -89,12 +103,10 @@ html {
   justify-content: space-between;
   align-items: center;
 
-  min-height: 50px;
-  max-height: 75px;
-  height: auto;
+  height: 60px;
 
   overflow: hidden;
-  border-bottom: 1px solid var(--primary-color);
+  border-bottom: 2px solid hsl(244, 28%, 93%);
 }
 
 .navbar ul {
@@ -117,17 +129,31 @@ html {
 
 .navbar a {
   text-decoration: none;
-
   transition: all 0.1s ease;
+  position: relative;
 }
 
-.navbar a:hover,
-.navbar a:active {
+.navbar a::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: var(--primary-color);
+
+  transition: 0.2s;
+}
+
+.navbar li:not(:first-child) a:hover::before {
+  width: 100%;
+}
+
+.navbar a:hover {
   color: var(--accent-color);
 }
 
-.navbar li:not(:first-child) a:hover,
-.navbar li:not(:first-child) a:active {
+.navbar li:not(:first-child) a:hover {
   color: var(--accent-color);
   font-size: var(--font-size-large);
 }
@@ -136,20 +162,24 @@ html {
   fill: var(--primary-color);
 }
 
+.fill-light {
+  fill: var(--text-color-light);
+}
+
 .sidebar {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: flex-start;
+  align-items: center;
 
   height: 100svh;
-  width: 0;
+  width: 100svw;
   position: fixed;
   top: 0;
   right: 0;
 
   list-style: none;
-  background-color: var(--secondary-color);
+  background-color: var(--primary-color);
 }
 
 .sidebar ul {
@@ -159,6 +189,9 @@ html {
 .sidebar li {
   padding: 10px;
   width: 100%;
+
+  display: flex;
+  justify-content: center;
 }
 
 .sidebar a {
@@ -167,8 +200,7 @@ html {
   transition: all 0.1s ease;
 }
 
-.sidebar a:hover,
-.sidebar a:active {
+.sidebar a:hover {
   color: var(--accent-color);
 }
 
@@ -191,7 +223,7 @@ html {
   flex-direction: column;
   flex-wrap: wrap;
 
-  flex-basis: 45%;
+  flex-basis: 47.5%;
   min-width: 300px;
 
   justify-content: flex-start;
