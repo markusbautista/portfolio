@@ -14,7 +14,7 @@
       <nav class="navbar">
         <ul>
           <li>
-            <a href="#home" class="headingText primaryColorText">marCODES</a>
+            <a href="#home" class="logoText primaryColorText">marCODES</a>
           </li>
           <li>
             <a href="#about" class="primaryColorText hideOnMobile">About</a>
@@ -55,7 +55,7 @@
               height="24px"
               viewBox="0 -960 960 960"
               width="24px"
-              class="menu-icon"
+              class="menu-icon fill-light"
               onclick="toggleSidebar()"
             >
               <path
@@ -64,22 +64,37 @@
             </svg>
           </li>
           <li>
-            <a href="#about" class="primaryColorText">About</a>
+            <a href="#about" class="lightText">About</a>
           </li>
           <li>
-            <a href="#skills" class="primaryColorText">Skills</a>
+            <a href="#skills" class="lightText">Skills</a>
           </li>
           <li>
-            <a href="#projects" class="primaryColorText">Projects</a>
+            <a href="#projects" class="lightText">Projects</a>
           </li>
           <li>
-            <a href="#contact" class="primaryColorText">Contact</a>
+            <a href="#contact" class="lightText">Contact</a>
           </li>
         </ul>
       </div>
     </header>
 
     <div class="container">
+      <div class="section" id="home">
+        <div class="two-column-paragraph">
+          <div class="titled-paragraph">
+            <h2 class="subheadingText">Hi, I'm Markus Bautista, your next</h2>
+            <h1 class="headingText primaryColorText">Software Developer.</h1>
+            <p class="normalText">
+              Highly motivated web developer with a strong foundation in HTML,
+              CSS, JavaScript, and experience in full-stack development.
+            </p>
+          </div>
+
+          <div class="titled-paragraph"></div>
+        </div>
+      </div>
+
       <div class="section" id="about">
         <div class="two-column-paragraph">
           <div class="titled-paragraph">
@@ -104,15 +119,17 @@
           </div>
         </div>
       </div>
+
+      <div class="section" id="home"></div>
     </div>
 
     <script>
       function toggleSidebar() {
         var sidebar = document.getElementById("sidebar");
-        if (sidebar.style.width === "75svw") {
-          sidebar.style.width = "0";
+        if (sidebar.style.display === "flex") {
+          sidebar.style.display = "none";
         } else {
-          sidebar.style.width = "75svw";
+          sidebar.style.display = "flex";
         }
       }
     </script>
