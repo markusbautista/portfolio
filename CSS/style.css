@@ -39,15 +39,17 @@ html {
 }
 
 .container {
-  padding: 0 5%;
+  padding: 0;
 }
 
 .section {
-  padding: 5% 0;
+  padding: 2.5% 5%;
 }
 
 #home {
   height: calc(100svh - 60px);
+  display: flex;
+  align-items: center;
 }
 
 .showOnMobile {
@@ -172,7 +174,7 @@ html {
   justify-content: flex-start;
   align-items: center;
 
-  height: 100vh;
+  height: 100svh;
   width: 100svw;
   position: fixed;
   top: 0;
@@ -230,12 +232,38 @@ html {
   align-items: flex-start;
 }
 
+#skills {
+  background-color: var(--primary-color);
+}
+
+.carousel {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+
+  justify-content: space-between;
+  align-items: center;
+
+  column-gap: 20px;
+}
+
+.carousel_title {
+  width: 100%;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+
+  width: calc(100% / 3 - 2%);
+  padding: 2%;
+  background-color: var(--background-color);
+  border-radius: 15px;
+}
+
 /* Media query for small screens */
 @media (max-width: 700px) {
-  #home {
-    overflow: hidden;
-  }
-  
   .hideOnMobile {
     display: none;
   }
@@ -248,13 +276,23 @@ html {
     font-size: var(--font-size-small);
   }
 
-  .navbar {
-    border-bottom: none;
-  }
-
   .titled-paragraph {
     flex-basis: 100%;
     min-width: 100%;
     padding: 5% 0;
+  }
+
+  #home {
+    align-items: flex-start;
+  }
+
+  .carousel {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 100%;
+    padding: 5%;
+    text-align: center;
   }
 }
