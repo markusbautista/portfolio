@@ -288,6 +288,8 @@ html {
 
   .carousel {
     flex-direction: column;
+    column-gap: 0px;
+    row-gap: 20px;
   }
 
   .card {
