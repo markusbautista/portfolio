@@ -264,12 +264,13 @@ html {
 }
 
 footer {
+  width: 100%;
   padding: 2%;
   text-align: center;
 }
 
 /* Media query for small screens */
-@media (max-width: 700px) {
+@media (max-width: 600px) {
   .hideOnMobile {
     display: none;
   }
