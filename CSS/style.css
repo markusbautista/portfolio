@@ -277,7 +277,7 @@ footer {
 }
 
 /* Media query for small screens */
-@media (max-width: 600px) {
+@media (max-width: 730px) {
   .hideOnMobile {
     display: none;
   }
