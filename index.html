@@ -22,8 +22,7 @@
       content="Explore the portfolio of marCODES, showcasing various web development projects and coding achievements."
     />
     <meta property="og:site_name" content="marCODES" />
-    <meta name="author" content="Markus Bautista">
-    
+
     <link rel="stylesheet" href="./CSS/style.css" />
   </head>
 
@@ -82,16 +81,16 @@
             </svg>
           </li>
           <li>
-            <a href="#about" class="lightText" onclick="toggleSidebar()">About</a>
+            <a href="#about" class="lightText">About</a>
           </li>
           <li>
-            <a href="#skills" class="lightText" onclick="toggleSidebar()">Skills</a>
+            <a href="#skills" class="lightText">Skills</a>
           </li>
           <li>
-            <a href="#projects" class="lightText" onclick="toggleSidebar()">Projects</a>
+            <a href="#projects" class="lightText">Projects</a>
           </li>
           <li>
-            <a href="#contact" class="lightText" onclick="toggleSidebar()">Contact</a>
+            <a href="#contact" class="lightText">Contact</a>
           </li>
         </ul>
       </div>
@@ -107,6 +106,12 @@
               Highly motivated web developer with a strong foundation in HTML,
               CSS, JavaScript, and experience in full-stack development.
             </p>
+            <div class="two-column-paragraph">
+              <p>About me -></p>
+              <button onclick="alert('Are you sure you want to continue?')">
+                Contact
+              </button>
+            </div>
           </div>
 
           <div class="titled-paragraph"></div>
@@ -138,7 +143,38 @@
         </div>
       </div>
 
-      <div class="section" id="home"></div>
+      <div class="section" id="skills">
+        <div class="carousel">
+          <h2 class="carousel_title subheadingText lightText">Skills</h2>
+          <div class="card">
+            <h3 class="titleText">Skill 1</h3>
+            <p class="normalText">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur atque beatae cum commodi ipsa reiciendis quae
+              recusandae? Et ad ullam, fuga, optio praesentium itaque suscipit
+              fugit molestiae delectus officiis veritatis.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="titleText">Skill 2</h3>
+            <p class="normalText">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur atque beatae cum commodi ipsa reiciendis quae
+              recusandae? Et ad ullam, fuga, optio praesentium itaque suscipit
+              fugit molestiae delectus officiis veritatis.
+            </p>
+          </div>
+          <div class="card">
+            <h3 class="titleText">Skill 3</h3>
+            <p class="normalText">
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Consequatur atque beatae cum commodi ipsa reiciendis quae
+              recusandae? Et ad ullam, fuga, optio praesentium itaque suscipit
+              fugit molestiae delectus officiis veritatis.
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script>
