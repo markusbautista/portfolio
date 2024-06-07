@@ -50,6 +50,7 @@ html {
   height: calc(100svh - 60px);
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 
 .showOnMobile {
@@ -64,11 +65,13 @@ html {
 .headingText {
   font-size: var(--font-size-3x-large);
   font-weight: 700;
+  line-height: 1.25;
 }
 
 .subheadingText {
   font-size: var(--font-size-2x-large);
   font-weight: 500;
+  line-height: 1.25;
 }
 
 .titleText {
@@ -264,13 +267,17 @@ html {
 }
 
 footer {
-  width: 100%;
   padding: 2%;
   text-align: center;
 }
 
+#introduction {
+  column-gap: 20px;
+  row-gap: 20px;
+}
+
 /* Media query for small screens */
-@media (max-width: 800px) {
+@media (max-width: 600px) {
   .hideOnMobile {
     display: none;
   }
